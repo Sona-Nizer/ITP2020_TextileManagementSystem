@@ -215,6 +215,7 @@ function showSlides(n) {
 }
 </script>
 
+		<jsp:include page="HomeFooter.jsp"></jsp:include>
 
 </body>
 </html>
