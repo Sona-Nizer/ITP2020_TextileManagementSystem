@@ -42,8 +42,39 @@ public class LoginServlet extends HttpServlet {
 			
 			boolean status = il.adminLogin(email, password);
 
+			
+			if (status == true) {
+				
+				adminName = il.adminName(email);
+				
+				HttpSession session = request.getSession();
+				session.setAttribute("userEmail", email);
+				session.setAttribute("userType", userType);
+				session.setAttribute("userName", adminName);
+				
+				System.out.println("Admin Login Successful!");
+				
+				out.println("<body>");
+				out.println("<script>");
+				out.println("alert('Admin Login Successful! hello');");
+				out.println("</script>");
+				out.println("</body>");
+				out.println("<meta http-equiv='refresh' content='1 ;URL=AdminHome.jsp'>");
+
+			}
+			else if (status == false) {
+
+				System.out.println("Login Unsuccessful!");
+				System.out.println("status = " + status);
+				out.println("<body><script>");
+				out.println("alert('Invalid user credentials! Please enter correct email and password!');");
+				out.println("</script></body>");
+				out.println("<meta http-equiv='refresh' content='1 ;URL=Login.jsp'>");
+		
+			}
 				
 		}
+		
 
 		
 			
