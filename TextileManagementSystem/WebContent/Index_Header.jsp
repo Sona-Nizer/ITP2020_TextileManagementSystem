@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Index Header</title>
-<link href="styles/HomeHeaderStyles.css" rel="stylesheet" type="text/css">
+<link href="styles/HomePage_Header_Styles.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>

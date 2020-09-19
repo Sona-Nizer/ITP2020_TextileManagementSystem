@@ -27,8 +27,6 @@ public class Product {
 	private double productPrice;
 	
 	private int productReOrderLevel;
-
-	private InputStream inputStream;
 	
 	/*
 	 * @return productID
@@ -127,20 +125,5 @@ public class Product {
 	public void setProductReOrderLevel(int productReOrderLevel) {
 		this.productReOrderLevel = productReOrderLevel;
 	}
-
-	/*
-	 * @return productReOrderLevel
-	 */
-	public InputStream getInputStream() {
-		return inputStream;
-	}
-
-	/*
-	 * @param this.productReOrderLevel set to productReOrderLevel
-	 */
-	public void setInputStream(InputStream inputStream) {
-		this.inputStream = inputStream;
-	}
-
-
+	
 }

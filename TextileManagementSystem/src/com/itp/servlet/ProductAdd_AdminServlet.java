@@ -58,18 +58,6 @@ public class ProductAdd_AdminServlet extends HttpServlet {
 		String size = request.getParameter("size");
 		double price = Double.parseDouble(request.getParameter("price"));
 		int reOrderLevel = Integer.parseInt(request.getParameter("reOrderLevel"));
-		Part filePart = request.getPart("photo");
-		System.out.println("file part = " + filePart);
-		
-		if (filePart != null) {
-            // prints out some information for debugging
-            System.out.println(filePart.getName());
-            System.out.println(filePart.getSize());
-            System.out.println(filePart.getContentType());
-             
-            // obtains input stream of the upload file
-            inputStream = filePart.getInputStream();
-        }
 		
 		/*
 		 * Creating an object from Product
@@ -84,8 +72,6 @@ public class ProductAdd_AdminServlet extends HttpServlet {
 		p1.setProductSize(size);
 		p1.setProductPrice(price);
 		p1.setProductReOrderLevel(reOrderLevel);
-		p1.setInputStream(inputStream);
-		System.out.println("input1 = " + inputStream);
 		
 		int status = 0;
 		

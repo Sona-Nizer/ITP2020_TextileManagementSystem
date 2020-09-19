@@ -12,11 +12,11 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Login</title>
-<link href="adminStyles.css" rel="stylesheet" type="text/css">
+<link href="styles/AdminHome_Styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
-	<h1>Login</h1>
+	<h2>Login</h2>
 	<hr>
 	
 	<form action="LoginServlet" method="post">

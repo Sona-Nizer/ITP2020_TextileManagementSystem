@@ -15,7 +15,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Retrieve Product</title>
-<link href="styles/Admin_Styles.css" rel="stylesheet" type="text/css">
+<link href="styles/AdminHome_Styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 

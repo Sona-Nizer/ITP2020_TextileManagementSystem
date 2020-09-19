@@ -12,7 +12,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Home Page</title>
-<link href="styles/HomeStyles.css" rel="stylesheet" type="text/css">
+<link href="styles/HomePage_Styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 		

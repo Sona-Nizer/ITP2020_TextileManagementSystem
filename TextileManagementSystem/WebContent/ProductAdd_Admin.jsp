@@ -13,7 +13,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Product</title>
-<link href="styles/Admin_Styles.css" rel="stylesheet" type="text/css">
+<link href="styles/AdminHome_Styles.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -63,10 +63,6 @@
 		
 		<label>Enter Re-Order Level</label><br><br>
 		<input type="number" name="reOrderLevel" placeholder="Enter Re-Order Level" required><br><br><br>
-		
-		<!-- image to be added into form -->
-		<label>Upload Image</label><br><br>
-		<input type="file" name="image" placeholder="Select file"><br><br><br>
 		
 		<input type="submit" value="Add Product" id="submit">
 		<input type="reset" value="Reset Form" id="reset">
