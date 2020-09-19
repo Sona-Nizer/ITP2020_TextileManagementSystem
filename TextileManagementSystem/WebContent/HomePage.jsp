@@ -10,9 +10,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="ISO-8859-1"> 
 <title>Home Page</title>
 <link href="styles/HomePage_Styles.css" rel="stylesheet" type="text/css">
+<style>
+	body {
+	background: url("images/img19.jpg");     
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+	}
+</style>
 </head>
 <body>
 
@@ -93,7 +101,7 @@
    			<div class="flip-box">
   			<div class="flip-box-inner">
     			<div class="flip-box-front">
-     			<img src="images/category/men.jpg" style="width:500px;height:200px">
+     			<img src="images/category/men.jpg" style="width:300px;height:200px">
     			</div>
     			<div class="flip-box-back">
       			<h2><a href="#">Men's Wear</a></h2>

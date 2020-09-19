@@ -13,6 +13,14 @@
 <meta charset="ISO-8859-1">
 <title>Login</title>
 <link href="styles/AdminHome_Styles.css" rel="stylesheet" type="text/css">
+<style>
+	body {
+	background: url("images/bg1.jpg");     
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+	}
+</style>
 </head>
 <body>
 

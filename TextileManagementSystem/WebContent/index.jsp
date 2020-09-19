@@ -87,7 +87,7 @@
    			<div class="flip-box">
   			<div class="flip-box-inner">
     			<div class="flip-box-front">
-     			<img src="images/category/men.jpg" style="width:500px;height:200px">
+     			<img src="images/category/men.jpg" style="width:300px;height:200px">
     			</div>
     			<div class="flip-box-back">
       			<h2><a href="#">Men's Wear</a></h2>
