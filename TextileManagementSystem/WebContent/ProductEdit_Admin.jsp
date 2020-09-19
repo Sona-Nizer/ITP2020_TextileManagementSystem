@@ -16,26 +16,34 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Edit Product</title>
-<link href="styles/AdminStyles.css" rel="stylesheet" type="text/css">
+<link href="styles/Admin_Styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
+	<%
+		if (session.getAttribute("userEmail") == null || 
+			session.getAttribute("userType").equals("customer") || 
+			session.getAttribute("userType").equals("supplier")) {
+			
+				response.sendRedirect("Login.jsp");
+		}
+	%>
+
 	<jsp:include page="AdminHeader.jsp"></jsp:include>
 	
-	<h1>Update Product</h1>
-	<hr>
+	<h2>Update Product</h2>
+	<hr class="hrStyles">
 	
 	<% 
 		Product p1 = (Product) request.getAttribute("p1");
 		String ID = p1.getProductID();
 	%>
+	<div class="container">
 	
 	<form action="ProductEdit_AdminServlet?id=<%= ID %>" method="post">
 		
-		<div class="container">
-		
 		<label>Product ID</label>
-		<p class="inputHidden"><%= p1.getProductID() %></p>
+		<p class="inputHidden"><%= p1.getProductID() %></p><br><br>
 		
 		<label>Change Product Name</label><br><br>
 		<input type="text" name="name" value="<%= p1.getProductName() %>"><br><br><br>
@@ -66,9 +74,9 @@
 		
 		<input type="submit" value="Edit Product" id="submit">
 		<input type="reset" value="Reset Form" id="reset">
-		</div>
 	
 	</form>
+	</div>
 
 </body>
 </html>

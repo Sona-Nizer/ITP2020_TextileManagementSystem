@@ -6,7 +6,9 @@
 
 package com.itp.servlet;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
@@ -14,6 +16,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 
 import com.itp.model.Product;
 import com.itp.service.*;
@@ -45,14 +48,28 @@ public class ProductAdd_AdminServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		PrintWriter out = response.getWriter();
+		InputStream inputStream = null;
 		
 		String id = request.getParameter("id");
 		String name = request.getParameter("name");
 		String category = request.getParameter("category");
 		int qty = Integer.parseInt(request.getParameter("qty"));
+		System.out.println("qty = " +qty);
 		String size = request.getParameter("size");
 		double price = Double.parseDouble(request.getParameter("price"));
 		int reOrderLevel = Integer.parseInt(request.getParameter("reOrderLevel"));
+		Part filePart = request.getPart("photo");
+		System.out.println("file part = " + filePart);
+		
+		if (filePart != null) {
+            // prints out some information for debugging
+            System.out.println(filePart.getName());
+            System.out.println(filePart.getSize());
+            System.out.println(filePart.getContentType());
+             
+            // obtains input stream of the upload file
+            inputStream = filePart.getInputStream();
+        }
 		
 		/*
 		 * Creating an object from Product
@@ -67,6 +84,8 @@ public class ProductAdd_AdminServlet extends HttpServlet {
 		p1.setProductSize(size);
 		p1.setProductPrice(price);
 		p1.setProductReOrderLevel(reOrderLevel);
+		p1.setInputStream(inputStream);
+		System.out.println("input1 = " + inputStream);
 		
 		int status = 0;
 		

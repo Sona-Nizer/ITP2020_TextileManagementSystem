@@ -12,14 +12,14 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>header</title>
-<link href="styles/HeaderAdmin.css" rel="stylesheet" type="text/css">
+<link href="styles/Admin_HeaderStyles.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
-	<div class="container">
+	<div class="header_container">
 		<a href="index.jsp"><img src="images/logo.jpg" alt="Logo" class="logo"></a>
-		<h1>World of Fashion</h1>
+		<h1 class="headeH1">World of Fashion</h1>
 		<br><br><br><br><br><br><br>
 	</div>
 	

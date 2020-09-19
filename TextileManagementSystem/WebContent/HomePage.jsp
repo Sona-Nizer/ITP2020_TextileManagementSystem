@@ -15,8 +15,15 @@
 <link href="styles/HomeStyles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-		<jsp:include page="HomeHeader.jsp"></jsp:include>
-		
+
+	<%
+		if (session.getAttribute("userEmail") == null) {
+			response.sendRedirect("Login.jsp");
+		}
+	%>
+
+		<jsp:include page="HomePage_Header_AfterLogin.jsp"></jsp:include>
+		Welcome ${userEmail}
 		<br><br>
 
 		<div class="slideshow-container">

@@ -13,20 +13,28 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Product</title>
-<link href="styles/AdminStyles.css" rel="stylesheet" type="text/css">
+<link href="styles/Admin_Styles.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-	<!-- <div class="form-style"> -->
+
+	<%
+		if (session.getAttribute("userEmail") == null || 
+			session.getAttribute("userType").equals("customer") || 
+			session.getAttribute("userType").equals("supplier")) {
+			
+				response.sendRedirect("Login.jsp");
+		}
+	%>
 	
 	<jsp:include page="AdminHeader.jsp"></jsp:include>
 	
-	<h1>Add Product</h1>
-	<hr>
-	
-	<form action="ProductAdd_AdminServlet" method="post">
+	<h2>Add Product</h2>
+	<hr class="hrStyles">
 	
 	<div class="container">
+	
+	<form action="ProductAdd_AdminServlet" method="post">
 	
 		<label>Enter Product ID</label><br><br>
 		<input type="text" name="id" placeholder="Enter Product ID" required><br><br><br>
@@ -56,25 +64,22 @@
 		<label>Enter Re-Order Level</label><br><br>
 		<input type="number" name="reOrderLevel" placeholder="Enter Re-Order Level" required><br><br><br>
 		
-		<!-- image to added into form -->
+		<!-- image to be added into form -->
+		<label>Upload Image</label><br><br>
+		<input type="file" name="image" placeholder="Select file"><br><br><br>
 		
 		<input type="submit" value="Add Product" id="submit">
 		<input type="reset" value="Reset Form" id="reset">
-
-	</div>
 	
+		<br><br>
 	</form>
 	
-	<div class="container">
-	
-		<form action="Demo_ProductAdd_AdminServlet" method="post">
+			<form action="Demo_ProductAdd_AdminServlet" method="post">
 		
 			<input type="submit" value="Demo Add Product" id="submit">
 		
 		</form>
-	</div>
-			  	
-	<!--</div>  -->
+		</div>
 
 </body>
 </html>

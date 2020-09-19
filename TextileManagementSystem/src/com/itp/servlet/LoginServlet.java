@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.itp.service.*;
 
@@ -32,6 +33,7 @@ public class LoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.sendRedirect("ProductAdd_Admin.jsp");
 	}
 
 	/**
@@ -53,7 +55,10 @@ public class LoginServlet extends HttpServlet {
 
 				if (status == true) {
 					System.out.println("Login Successful!");
-			
+					HttpSession session = request.getSession();
+					session.setAttribute("userEmail", email);
+					session.setAttribute("userType", userType);
+					
 					out.println("<body>");
 					out.println("<script>");
 					out.println("alert('Login Successful!');");
@@ -81,6 +86,10 @@ public class LoginServlet extends HttpServlet {
 				if (status == true) {
 					System.out.println("Login Successful!");
 			
+					HttpSession session = request.getSession();
+					session.setAttribute("userEmail", email);
+					session.setAttribute("userType", userType);
+					
 					out.println("<body>");
 					out.println("<script>");
 					out.println("alert('Login Successful!');");
@@ -107,6 +116,10 @@ public class LoginServlet extends HttpServlet {
 
 				if (status == true) {
 					System.out.println("Login Successful!");
+					
+					HttpSession session = request.getSession();
+					session.setAttribute("userEmail", email);
+					session.setAttribute("userType", userType);
 			
 					out.println("<body>");
 					out.println("<script>");
