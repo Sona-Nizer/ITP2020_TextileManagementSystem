@@ -11,6 +11,9 @@ import com.itp.util.DBConnectionUtil;
 
 import java.util.*;
 import java.util.logging.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.sql.*;
 
 /*
@@ -38,6 +41,7 @@ public class ProductServiceImpl implements iProductService {
 		
 		//Sql query saved inside query
 		try {
+			
 			String query = "INSERT INTO textilemanagementsystem.product" +
 							"(ID, name, category, qty, size, price, reOrderLevel)" +
 							"VALUES(?,?,?,?,?,?,?)";

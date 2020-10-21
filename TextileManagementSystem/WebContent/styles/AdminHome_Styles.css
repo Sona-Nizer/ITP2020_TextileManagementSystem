@@ -5,11 +5,12 @@ body {
     background-size: 100% 100%;
 	}
 
-	h1 {
+	h2 {
 	color: #00009b;
 	text-align: center;
+	font-size: 30px;
 	}
-	
+
 	#h3color {
 			color: red;	
 	}
@@ -24,6 +25,9 @@ body {
 		hr {
 			width: 55%;
 		}
+		.hrStyles {
+			width: 55%;
+		}
 		
 	input[type=text], input[type=password], input[type=number], input[type=email]
 	{
@@ -34,7 +38,7 @@ body {
 			border: none;
 			background: #e6e6ff;
 	}
-	.inputHidden {
+	p {
 			width: 90%;
 			font-family: Arial, Helevetica, sans-serif;
 			padding: 15px;
@@ -96,7 +100,6 @@ body {
  		 	padding: 10px;
  		 	text-align: center;
 		}
-
 		.form-inline input {
 	 	 	padding: 10px;
   			background-color: #ffc4e1;

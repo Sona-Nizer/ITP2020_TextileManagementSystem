@@ -79,4 +79,29 @@ public class LoginServiceImpl implements iLoginService {
 		
 		return status;
 	}
+	
+	public String adminName(String email) {
+		
+		Connection con = DBConnectionUtil.getConnection();
+		
+		String name = null;
+		
+		try {
+			String query="SELECT fullName FROM textilemanagementsystem.admin WHERE email=?";
+			
+			PreparedStatement ps = con.prepareStatement(query);
+			ps.setString(1, email);
+			
+			ResultSet rs=ps.executeQuery();
+			name = rs.getString(1);
+			System.out.println("name = " + name);
+			
+			con.close();
+			
+		}catch(Exception ex) {
+			ex.printStackTrace();
+			}
+		System.out.println("name = " + name);
+		return name;
+	}
 }

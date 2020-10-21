@@ -12,7 +12,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Contact Us</title>
-<link href="styles/contact.css" rel="stylesheet" type="text/css">
+<link href="styles/Contact_Styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 

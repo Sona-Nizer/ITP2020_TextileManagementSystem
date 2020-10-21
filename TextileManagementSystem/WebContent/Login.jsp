@@ -12,11 +12,19 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Login</title>
-<link href="adminStyles.css" rel="stylesheet" type="text/css">
+<link href="styles/AdminHome_Styles.css" rel="stylesheet" type="text/css">
+<style>
+	body {
+	background: url("images/bg1.jpg");     
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+	}
+</style>
 </head>
 <body>
 
-	<h1>Login</h1>
+	<h2>Login</h2>
 	<hr>
 	
 	<form action="LoginServlet" method="post">

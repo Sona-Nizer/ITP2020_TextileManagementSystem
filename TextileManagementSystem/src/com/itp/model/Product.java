@@ -6,6 +6,7 @@
 
 package com.itp.model;
 
+import java.io.*;
 /*
  * This is the product model class
  * which stores the details of the products.
@@ -26,7 +27,6 @@ public class Product {
 	private double productPrice;
 	
 	private int productReOrderLevel;
-	
 	
 	/*
 	 * @return productID
@@ -125,5 +125,5 @@ public class Product {
 	public void setProductReOrderLevel(int productReOrderLevel) {
 		this.productReOrderLevel = productReOrderLevel;
 	}
-
+	
 }

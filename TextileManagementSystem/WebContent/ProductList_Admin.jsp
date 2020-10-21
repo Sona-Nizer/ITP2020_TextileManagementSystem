@@ -17,18 +17,27 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Product List</title>
-<link href="styles/AdminStyles.css" rel="stylesheet" type="text/css">
+<link href="styles/AdminHome_Styles.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
+	<%
+		if (session.getAttribute("userEmail") == null || 
+			session.getAttribute("userType").equals("customer") || 
+			session.getAttribute("userType").equals("supplier")) {
+			
+				response.sendRedirect("Login.jsp");
+		}
+	%>
+
 	<jsp:include page="AdminHeader.jsp"></jsp:include>
 
-	<h1>Product List</h1>
-	<hr> <br>
+	<h2>Product List</h2>
+	<hr class="hrStyles"> <br>
 	
 	<form class="form-inline" action="ProductGetById_AdminServlet" method="post">
-
+		
 		<input type="text" name="id" placeholder="Search Product By ID">
 	
 	</form>

@@ -15,9 +15,18 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Retrieve Product</title>
-<link href="styles/AdminStyles.css" rel="stylesheet" type="text/css">
+<link href="styles/AdminHome_Styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+
+	<%
+		if (session.getAttribute("userEmail") == null || 
+			session.getAttribute("userType").equals("customer") || 
+			session.getAttribute("userType").equals("supplier")) {
+			
+				response.sendRedirect("Login.jsp");
+		}
+	%>
 
 	<jsp:include page="AdminHeader.jsp"></jsp:include>
 
